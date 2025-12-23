@@ -28,7 +28,7 @@ pipeline {
                 script {
                     echo 'Running a quick test...'
                     bat "docker run -d -p 5000:5000 --name test-container %IMAGE_NAME%:%BUILD_NUMBER%"
-                    bat "timeout /t 5"
+                  sleep(time: 5, unit: "SECONDS")
                     bat "curl localhost:5000"
                 }
             }
