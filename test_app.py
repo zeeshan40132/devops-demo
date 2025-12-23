@@ -17,7 +17,7 @@ class BasicTests(unittest.TestCase):
         # Send a GET request
         response = self.app.get('/')
         # Assert that the word "Hello" is in the response text
-        self.assertIn('Hello', response.data.decode('utf-8'))
+        self.assertIn('Welcome', response.data.decode('utf-8'))
 
 if __name__ == "__main__":
     unittest.main()
